@@ -11,7 +11,9 @@ import { FooterComponent } from './Pages/footer/footer.component';
 import { CartComponent } from './Pages/cart/cart.component';
 import { ShopComponent } from './Pages/shop/shop.component';
 
+
 @NgModule({
+  
   declarations: [
     AppComponent,
     LoginComponent,
@@ -26,6 +28,7 @@ import { ShopComponent } from './Pages/shop/shop.component';
     BrowserModule,
     AppRoutingModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
