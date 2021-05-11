@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductservicesService } from 'src/app/Sevices/Product/productservices.service';
+import { HomeservicesService } from 'src/app/Sevices/Home/Homeservices.service';
 import { Iproduct } from 'src/app/Interface/Iproduct';
+import { Icategory } from 'src/app/Interface/Icategory';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,20 +9,36 @@ import { Iproduct } from 'src/app/Interface/Iproduct';
 })
 export class HomeComponent implements OnInit {
   products: Iproduct[] = [];
-  productOrders:Iproduct[]=[];
+  productList:Iproduct[]=[];
+  categories: Icategory[] = [];
+  categoryList:Icategory[]=[];
 
-  constructor(private ProductService: ProductservicesService) { }
+  constructor(private HomeService: HomeservicesService) { }
 
   ngOnInit(): void {
     this.loadProducts();
+    this.loadCategories();
+  }
+  loadCategories(){
+
+    this.HomeService.getAllCategories()
+    .subscribe(
+        (categories: any[]) => {
+            this.categories = categories;
+            this.categories.forEach(category => {
+                this.categoryList.push(category);
+            })
+        },
+        (error) => console.log(error)
+    );
   }
   loadProducts() {
-    this.ProductService.getAllProducts()
+    this.HomeService.getAllProducts()
         .subscribe(
             (products: any[]) => {
                 this.products = products;
                 this.products.forEach(product => {
-                    this.productOrders.push(product);
+                    this.productList.push(product);
                 })
             },
             (error) => console.log(error)

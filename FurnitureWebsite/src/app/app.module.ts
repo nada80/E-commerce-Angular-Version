@@ -10,7 +10,7 @@ import { HeaderComponent } from './Pages/header/header.component';
 import { FooterComponent } from './Pages/footer/footer.component';
 import { CartComponent } from './Pages/cart/cart.component';
 import { ShopComponent } from './Pages/shop/shop.component';
-import { ProductservicesService } from './Sevices/Product/productservices.service';
+import { HomeservicesService } from './Sevices/Home/Homeservices.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -34,7 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   
   providers: [
-    ProductservicesService
+    HomeservicesService
   ],
   bootstrap: [AppComponent]
 })
