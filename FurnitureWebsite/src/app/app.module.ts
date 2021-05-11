@@ -10,7 +10,8 @@ import { HeaderComponent } from './Pages/header/header.component';
 import { FooterComponent } from './Pages/footer/footer.component';
 import { CartComponent } from './Pages/cart/cart.component';
 import { ShopComponent } from './Pages/shop/shop.component';
-import { CategoryComponent } from './Pages/Category/category/category.component';
+import { ProductservicesService } from './Sevices/Product/productservices.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,14 +25,17 @@ import { CategoryComponent } from './Pages/Category/category/category.component'
     FooterComponent,
     CartComponent,
     ShopComponent,
-    CategoryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   
-  providers: [],
+  providers: [
+    ProductservicesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
