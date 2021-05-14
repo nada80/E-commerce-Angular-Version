@@ -18,6 +18,8 @@ import { AddComponent } from './Dashboard/Category/add/add.component';
 import { DeleteComponent } from './Dashboard/Category/delete/delete.component';
 import { UpdateComponent } from './Dashboard/Category/update/update.component';
 import { GetComponent } from './Dashboard/Category/get/get.component';
+import { GetDetailsComponent } from './Dashboard/product/get-details/get-details.component';
+import { AdminLayoutComponent } from './AdminLayout/admin-layout/admin-layout.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { GetComponent } from './Dashboard/Category/get/get.component';
     AddComponent,
     DeleteComponent,
     UpdateComponent,
-    GetComponent
+    GetComponent,
+    GetDetailsComponent,
+    AdminLayoutComponent
     ],
   imports: [
     BrowserModule,
