@@ -8,15 +8,13 @@ import { Icategory } from 'src/app/Interface/Icategory';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  products: Iproduct[] = [];
-  productList:Iproduct[]=[];
+
   categories: Icategory[] = [];
   categoryList:Icategory[]=[];
 
   constructor(private HomeService: HomeservicesService) { }
 
   ngOnInit(): void {
-    this.loadProducts();
     this.loadCategories();
   }
   loadCategories(){
@@ -32,16 +30,6 @@ export class HomeComponent implements OnInit {
         (error) => console.log(error)
     );
   }
-  loadProducts() {
-    this.HomeService.getAllProducts()
-        .subscribe(
-            (products: any[]) => {
-                this.products = products;
-                this.products.forEach(product => {
-                    this.productList.push(product);
-                })
-            },
-            (error) => console.log(error)
-        );
-}
+
+
 }

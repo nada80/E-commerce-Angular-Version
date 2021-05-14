@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Iproduct } from 'src/app/Interface/Iproduct';
 import { HomeservicesService } from 'src/app/Sevices/Home/Homeservices.service';
 
-
 @Component({
-  selector: 'app-shop',
-  templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.scss']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.scss']
 })
-export class ShopComponent implements OnInit {
+export class ProductComponent implements OnInit {
   products: Iproduct[] = [];
   productList:Iproduct[]=[];
 
@@ -31,15 +30,15 @@ export class ShopComponent implements OnInit {
             (error) => console.log(error)
         );
 }
-_addItemToCart( id, quantity): void {
-  let payload = {
-    productId: id,
-    quantity,
-  };
-  // this.HomeService.addToCart(payload).subscribe(() => {
-  //   this.loadProducts();
-  //   alert('Product Added');
-  // });
-}
+// _addItemToCart( id, quantity): void {
+//   let payload = {
+//     productId: id,
+//     quantity,
+//   };
+//   this.HomeService.addToCart(payload).subscribe(() => {
+//     this.loadProducts();
+//     alert('Product Added');
+//   });
+// }
 
 }

@@ -12,6 +12,12 @@ import { CartComponent } from './Pages/cart/cart.component';
 import { ShopComponent } from './Pages/shop/shop.component';
 import { HomeservicesService } from './Sevices/Home/Homeservices.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './Pages/product/product.component';
+import { ProductOfCategoryComponent } from './Pages/product-of-category/product-of-category.component';
+import { AddComponent } from './Dashboard/Category/add/add.component';
+import { DeleteComponent } from './Dashboard/Category/delete/delete.component';
+import { UpdateComponent } from './Dashboard/Category/update/update.component';
+import { GetComponent } from './Dashboard/Category/get/get.component';
 
 
 @NgModule({
@@ -25,7 +31,13 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     CartComponent,
     ShopComponent,
-  ],
+    ProductComponent,
+    ProductOfCategoryComponent,
+    AddComponent,
+    DeleteComponent,
+    UpdateComponent,
+    GetComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
