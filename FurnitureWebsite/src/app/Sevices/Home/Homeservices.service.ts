@@ -14,9 +14,6 @@ export class HomeservicesService {
 
   constructor(private http:HttpClient) { }
 
-  getAllProducts() {
-    return this.http.get(`${environment.baseURL}/Products`);
-}
 
 // not work ???
 
