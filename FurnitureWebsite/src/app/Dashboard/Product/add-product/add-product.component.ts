@@ -8,24 +8,62 @@ import { ProductServicesService } from 'src/app/Sevices/Product/product-services
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
- product:Iproduct[];
-  submitted:boolean=false;
-  constructor( private productServices:ProductServicesService) { }
+  product = {
+    ProductName:'',
+   price:0,
+   description :'',
+   color :'',
+   size :'',
+   image :'',
+   quantity :0,
+   categoryID :null,
+   brandID :null
+    // available: false
+  };
+  submitted = false;
+
+  constructor(private productService: ProductServicesService) { }
 
   ngOnInit(): void {
   }
 
-  creatProduct():void{
-    const data={
-      ProductName: this.product.ProductName,
-      price: number
-      Description: string
-      Color: string
-      Size: string
-      Image: string
-      Quantity: number
-      CategoryID: number
-      BrandID: number
-    }
+  createProduct(): void {
+    const data = {
+   ProductName:this.product.ProductName,
+   price:this.product.price,
+   description :this.product.description,
+   color :this.product.color,
+   size :this.product.size,
+   image :this.product.image,
+   quantity :this.product.quantity,
+   categoryID :this.product.categoryID,
+   brandID :this.product.brandID
+
+    };
+
+    this.productService.createProduct(data)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.submitted = true;
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  newProduct(): void {
+    this.submitted = false;
+    this.product = {
+      ProductName:'',
+      price:0,
+      description :'',
+      color :'',
+      size :'',
+      image :'',
+      quantity :0,
+      categoryID :null,
+      brandID :null
+    };
   }
 }

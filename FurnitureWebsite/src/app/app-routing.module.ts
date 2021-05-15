@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< Updated upstream
 import { AdminLayoutComponent } from './AdminLayout/admin-layout/admin-layout.component';
 import { AddProductComponent } from './Dashboard/product/add-product/add-product.component';
 import { DeleteProductComponent } from './Dashboard/product/delete-product/delete-product.component';
 import { GetAlProductComponent } from './Dashboard/product/get-al-product/get-al-product.component';
 import { ProductDetailsComponent } from './Dashboard/product/product-details/product-details.component';
 import { UpdateProductComponent } from './Dashboard/product/update-product/update-product.component';
-=======
-
->>>>>>> Stashed changes
 import { CartComponent } from './Pages/cart/cart.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
@@ -26,19 +22,14 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'dashbourd', component: AdminLayoutComponent},
   {path: 'shop', component: ShopComponent},
-<<<<<<< Updated upstream
   {path:'products',component:ProductComponent},
-
   {path:'dashbourd/products',component:GetAlProductComponent},
   {path: 'dashbourd/create', component: AddProductComponent},
   {path: 'UpdateProsuct/:id', component: UpdateProductComponent},
   {path: 'DeletProduct/:id', component: DeleteProductComponent},
   {path: 'dashbourd/product/:id', component: ProductDetailsComponent},
   {path:'cart',component:ShoppingCartComponent},
-=======
   {path: 'product', component: ProductComponent},
-
->>>>>>> Stashed changes
   {path: 'login', component: LoginComponent},  
   {path: 'register', component: RegisterComponent},
   {path: 'category/:id', component: ProductOfCategoryComponent},

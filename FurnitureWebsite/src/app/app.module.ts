@@ -21,16 +21,11 @@ import { GetComponent } from './Dashboard/Category/get/get.component';
 import { AdminLayoutComponent } from './AdminLayout/admin-layout/admin-layout.component';
 import { AddProductComponent } from './Dashboard/product/add-product/add-product.component';
 import { UpdateProductComponent } from './Dashboard/product/update-product/update-product.component';
-<<<<<<< Updated upstream
 import { GetAlProductComponent } from './Dashboard/product/get-al-product/get-al-product.component';
-import { ProductDetailsComponent } from './Dashboard/product/product-details/product-details.component';
-import { DeleteProductComponent } from './Dashboard/product/delete-product/delete-product.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-=======
 import { DeleteProductComponent } from './Dashboard/product/delete-product/delete-product.component';
 import { ProductDetailsComponent } from './Dashboard/product/product-details/product-details.component';
->>>>>>> Stashed changes
 
 
 @NgModule({
@@ -50,21 +45,17 @@ import { ProductDetailsComponent } from './Dashboard/product/product-details/pro
     DeleteComponent,
     UpdateComponent,
     GetComponent,
-<<<<<<< Updated upstream
     AdminLayoutComponent,
     AddProductComponent,
     UpdateProductComponent,
     GetAlProductComponent,
     ProductDetailsComponent,
     DeleteProductComponent,
-=======
-    GetDetailsComponent,
     AdminLayoutComponent,
     AddProductComponent,
     UpdateProductComponent,
     DeleteProductComponent,
     ProductDetailsComponent
->>>>>>> Stashed changes
     ],
   imports: [
     BrowserModule,

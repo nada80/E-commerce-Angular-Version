@@ -30,18 +30,11 @@ update(id, data): Observable<any> {
 delete(id): Observable<any> {
   return this.http.delete(`${environment.baseURL}/Products/${id}`);
 }
-<<<<<<< Updated upstream
 deleteAll(): Observable<any> {
   return this.http.delete(`${environment.baseURL}/Products`);
 }
 
 searchByName(name): Observable<any> {
   return this.http.get(`${environment.baseURL}/Products?name=${name}`);
-=======
-
-searchByName(name): Observable<any> {
-  return this.http.get(`${environment.baseURL}/Products?name=${name}`);
-}
->>>>>>> Stashed changes
 }
 }
