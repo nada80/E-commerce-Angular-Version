@@ -13,5 +13,5 @@ export interface Iproduct
  categoryID :Number
 
 
- brandID :number
+ BrandID :number
 }
