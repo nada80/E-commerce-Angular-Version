@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HomeservicesService } from 'src/app/Sevices/Home/Homeservices.service';
+import { Iproduct } from 'src/app/Interfaces/Iproduct';
+import { Icategory } from 'src/app/Interfaces/Icategory';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  categories: Icategory[] = [];
+  categoryList:Icategory[]=[];
+
+  constructor(private HomeService: HomeservicesService) { }
 
   ngOnInit(): void {
+    this.loadCategories();
   }
+  loadCategories(){
+
+    this.HomeService.getAllCategories()
+    .subscribe(
+        (categories: any[]) => {
+            this.categories = categories;
+            this.categories.forEach(category => {
+                this.categoryList.push(category);
+            })
+        },
+        (error) => console.log(error)
+    );
+  }
+
 
 }

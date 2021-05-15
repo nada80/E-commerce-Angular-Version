@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CategoryservicesService } from './Sevices/Category/categoryservices.service';
 import { Category } from './Shared Types/Category';
+import { environment } from './../environments/environment';
 
 @Component({
   selector: 'app-root',
