@@ -18,8 +18,14 @@ import { AddComponent } from './Dashboard/Category/add/add.component';
 import { DeleteComponent } from './Dashboard/Category/delete/delete.component';
 import { UpdateComponent } from './Dashboard/Category/update/update.component';
 import { GetComponent } from './Dashboard/Category/get/get.component';
-import { GetDetailsComponent } from './Dashboard/product/get-details/get-details.component';
 import { AdminLayoutComponent } from './AdminLayout/admin-layout/admin-layout.component';
+import { AddProductComponent } from './Dashboard/product/add-product/add-product.component';
+import { UpdateProductComponent } from './Dashboard/product/update-product/update-product.component';
+import { GetAlProductComponent } from './Dashboard/product/get-al-product/get-al-product.component';
+import { ProductDetailsComponent } from './Dashboard/product/product-details/product-details.component';
+import { DeleteProductComponent } from './Dashboard/product/delete-product/delete-product.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,11 +45,17 @@ import { AdminLayoutComponent } from './AdminLayout/admin-layout/admin-layout.co
     DeleteComponent,
     UpdateComponent,
     GetComponent,
-    GetDetailsComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    GetAlProductComponent,
+    ProductDetailsComponent,
+    DeleteProductComponent,
     ],
   imports: [
     BrowserModule,
+    RouterModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
 

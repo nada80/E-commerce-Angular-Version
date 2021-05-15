@@ -1,0 +1,99 @@
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-4">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by name"
+          [(ngModel)]="name"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchByName()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" style="margin-bottom: 40px;">
+      <h4>Product List</h4>
+      <ul class="list-group"  *ngFor="let product of productList; let i = index">
+
+        <li
+          class="list-group-item"
+          [class.active]="i == currentIndex"
+          (click)="setCurrentProduct(product, i)"
+        >
+        {{product.productName}}
+        </li>
+      </ul>
+  
+      <!-- <button class="m-4 btn btn-sm btn-danger" (click)="deleteAllProducts()">
+        Delete All
+      </button> -->
+    </div>
+    <div class="col-md-6" >
+      <div *ngIf="currentProduct" >
+        <h4>Product</h4>
+        <div>
+          <label><strong>ID:</strong></label> 
+          <span>{{currentProduct.id}}</span>
+        </div>
+        <div>
+          <label><strong>Name:</strong></label> 
+          <span>{{currentProduct.productName}}</span>
+        </div>
+        <div>
+          <label><strong>price:</strong></label>
+          <span>{{currentProduct.price}}</span>
+
+        </div>
+        <div>
+          <label><strong>Description:</strong></label>
+          <span>{{currentProduct.description}}</span>
+
+        </div>
+        <div>
+          <label><strong>Color:</strong></label>
+          <span>{{currentProduct.color}}</span>
+
+        </div>   
+         <div>
+          <label><strong>Size:</strong></label>
+          <span>{{currentProduct.size}}</span>
+
+        </div>    <div>
+          <label><strong>Image:</strong></label>
+          <span>{{currentProduct.image}}</span>
+
+        </div>   
+         <div>
+          <label><strong>Quantity:</strong></label>
+          <span>{{currentProduct.quantity}}</span>
+
+        </div>
+        <div>
+          <label><strong>CategoryID:</strong></label>
+          <span>{{currentProduct.categoryID}}</span>
+
+        </div>
+        <div>
+          <label><strong>BrandID:</strong></label>
+          <span>{{currentProduct.brandID}}</span>
+
+        </div>
+        <a class="badge badge-warning" routerLink="/dashbourd/product/{{currentProduct.id}}">
+          Edit
+        </a>
+      </div>
+  
+      <div *ngIf="!currentProduct">
+        <br />
+        <p>Please click on a product</p>
+      </div>
+    </div>
+  </div>
+  

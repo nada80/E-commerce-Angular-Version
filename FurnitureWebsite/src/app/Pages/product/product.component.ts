@@ -13,14 +13,14 @@ export class ProductComponent implements OnInit {
   productList:Iproduct[]=[];
 
 
-  constructor(private HomeService: ProductServicesService) { }
+  constructor(private HomeService: ProductServicesService , private productservices: ProductServicesService) { }
 
   ngOnInit(): void {
     this.loadProducts();
   }
  
   loadProducts() {
-    this.HomeService.getAllProducts()
+    this.productservices.getAllProducts()
         .subscribe(
             (products: any[]) => {
                 this.products = products;

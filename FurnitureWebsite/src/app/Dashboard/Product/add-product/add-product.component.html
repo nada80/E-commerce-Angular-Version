@@ -1,0 +1,117 @@
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="ProductName">ProductName</label>
+          <input
+            type="text"
+            class="form-control"
+            id="ProductName"
+            required
+            [(ngModel)]="product.ProductName"
+            name="ProductName"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="price">price</label>
+          <input
+            class="form-control"
+            id="price"
+            required
+            [(ngModel)]="product.price"
+            name="price"
+          />
+        </div>
+
+        
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            class="form-control"
+            id="Description"
+            required
+            [(ngModel)]="product.Description"
+            name="Description"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Color">Color</label>
+          <input
+            class="form-control"
+            id="Color"
+            required
+            [(ngModel)]="product.Color"
+            name="Color"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="Size">Size</label>
+          <input
+            class="form-control"
+            id="Size"
+            required
+            [(ngModel)]="product.Size"
+            name="Size"
+          />
+        </div>
+
+ 
+
+        <div class="form-group">
+          <label for="Image">Image</label>
+          <input
+            class="form-control"
+            id="Image"
+            required
+            [(ngModel)]="product.Image"
+            name="Image"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Quantity">Quantity</label>
+          <input
+            class="form-control"
+            id="Quantity"
+            required
+            [(ngModel)]="product.Quantity"
+            name="Quantity"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="CategoryID">CategoryID</label>
+          <input
+            class="form-control"
+            id="CategoryID"
+            required
+            [(ngModel)]="product.CategoryID"
+            name="CategoryID"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="BrandID">BrandID</label>
+          <input
+            class="form-control"
+            id="BrandID"
+            required
+            [(ngModel)]="product.BrandID"
+            name="BrandID"
+          />
+        </div>
+
+
+        <button (click)="createProduct()" class="btn btn-success">Create</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h3>You successfully created a product!</h3>
+        <button class="btn btn-success" (click)="newProduct()">New..</button>
+      </div>
+    </div>
+  </div>
+  
