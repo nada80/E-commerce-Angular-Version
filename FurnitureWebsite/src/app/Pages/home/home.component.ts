@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeservicesService } from 'src/app/Sevices/Home/Homeservices.service';
-import { Iproduct } from 'src/app/Interface/Iproduct';
-import { Icategory } from 'src/app/Interface/Icategory';
+import { Iproduct } from 'src/app/Interfaces/Iproduct';
+import { Icategory } from 'src/app/Interfaces/Icategory';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

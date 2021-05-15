@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './Pages/login/login.component';
-import { RegisterComponent } from './Pages/register/register.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { HeaderComponent } from './Pages/header/header.component';
 import { FooterComponent } from './Pages/footer/footer.component';
@@ -19,6 +16,7 @@ import { DeleteComponent } from './Dashboard/Category/delete/delete.component';
 import { UpdateComponent } from './Dashboard/Category/update/update.component';
 import { GetComponent } from './Dashboard/Category/get/get.component';
 import { AdminLayoutComponent } from './AdminLayout/admin-layout/admin-layout.component';
+<<<<<<< Updated upstream
 import { AddProductComponent } from './Dashboard/product/add-product/add-product.component';
 import { UpdateProductComponent } from './Dashboard/product/update-product/update-product.component';
 import { GetAlProductComponent } from './Dashboard/product/get-al-product/get-al-product.component';
@@ -26,14 +24,20 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DeleteProductComponent } from './Dashboard/product/delete-product/delete-product.component';
 import { ProductDetailsComponent } from './Dashboard/product/product-details/product-details.component';
+=======
+import { BoardUserComponent } from './Pages/board-user/board-user.component';
+import { ProfileComponent } from './Pages/profile/profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterUserComponent } from './Authentication/register-user/register-user.component';
+
+
+>>>>>>> Stashed changes
 
 
 @NgModule({
   
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
     HomeComponent,
     HeaderComponent,
     FooterComponent,
@@ -45,6 +49,7 @@ import { ProductDetailsComponent } from './Dashboard/product/product-details/pro
     DeleteComponent,
     UpdateComponent,
     GetComponent,
+<<<<<<< Updated upstream
     AdminLayoutComponent,
     AddProductComponent,
     UpdateProductComponent,
@@ -56,13 +61,21 @@ import { ProductDetailsComponent } from './Dashboard/product/product-details/pro
     UpdateProductComponent,
     DeleteProductComponent,
     ProductDetailsComponent
+=======
+    GetDetailsComponent,
+    AdminLayoutComponent,
+    BoardUserComponent,
+    ProfileComponent,
+    RegisterUserComponent
+>>>>>>> Stashed changes
     ],
   imports: [
     BrowserModule,
     RouterModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   
