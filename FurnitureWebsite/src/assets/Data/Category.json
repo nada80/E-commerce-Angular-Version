@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "categoryName": "Sofas and armchairs",
+        "products": []
+    },
+    {
+        "id": 2,
+        "categoryName": "Tables and chairs",
+        "products": []
+    },
+    {
+        "id": 3,
+        "categoryName": "Storage systems and units",
+        "products": []
+    },
+    {
+        "id": 4,
+        "categoryName": "Sleeping area and bedrooms",
+        "products": []
+    },
+    {
+        "id": 5,
+        "categoryName": "Kids furniture",
+        "products": []
+    },
+    {
+        "id": 6,
+        "categoryName": "Furniture components and hardware",
+        "products": []
+    }
+]

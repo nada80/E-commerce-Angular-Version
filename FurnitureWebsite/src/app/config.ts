@@ -1,3 +1,3 @@
-export const BaseURL = 'http://localhost:56398/api/Categories';
+// export const BaseURL = "http://localhost:56398";
+export const BaseURL = "/assets/Data/";
 
-export const PostURL = 'http://localhost:56398/api/Products';

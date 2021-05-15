@@ -1,6 +1,5 @@
-import { PostURL } from 'src/app/config';
+import { BaseURL } from 'src/app/config';
 
-export const CategoryController= {
-    GetAll: PostURL + `/Posts/GetAll`,
-
+export const ProductController= {
+    GetAllProducts: BaseURL + `Product.json`,    
 }

@@ -1,0 +1,44 @@
+<div *ngIf="products && products.length >= 1" class="row">
+    <!-- Single Product Area -->
+    <div *ngFor="let product of products" class="col-12 col-sm-6 col-md-12 col-xl-6">
+      <div class="single-product-wrapper">
+        <!-- Product Image -->
+        <div class="product-img">
+            <a routerLink="/product-details">
+                <img class="img-fluid" [src]="product.image" *ngIf="product.Image" alt=""/>
+            </a>
+          <!-- Hover Thumb -->
+          <!-- <img class="hover-img" src="assets/img/product-img/product2.jpg" alt=""> -->
+        </div>
+  
+        <!-- Product Description -->
+        <div class="product-description d-flex align-items-center justify-content-between">
+          <!-- Product Meta Data -->
+          <div class="product-meta-data">
+            <div class="line"></div>
+            <p class="product-price">${{product.price}}</p>
+            <a routerLink="/product-details">
+              <h6>{{product.productName}}</h6>
+            </a>
+          </div>
+          <!-- Ratings & Cart -->
+          <div class="ratings-cart text-right">
+            <div class="ratings">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <div class="cart">
+              <a routerLink="/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                <img src="assets/img/core-img/cart.png" alt=""/></a>
+            </div>
+            <div class="details">
+              <button class="btn btn-warning" (click)="viewProductDetails(product)">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
